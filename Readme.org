@@ -1,0 +1,34 @@
+
+* Angular
+** Essential topics
+- Angular overview
+- typescript basics
+- boostrapping
+- angular templates
+- component architecture 1
+- component architecture 2
+- component architecture 3
+- angular devtools
+- dependeccy injection
+- routing
+- forms
+- form validators
+
+
+** advanced topics
+- R*js
+- routing data
+- accessibility
+- testing
+- viewchildren
+- contentProjection
+- Component Lifecycle
+- pipes
+- animations
+- lazyloading
+- performance
+- Providers and injectors
+- Reactive forms
+- Route guards
+
+
