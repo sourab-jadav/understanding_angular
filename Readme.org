@@ -32,3 +32,11 @@
 - Route guards
 
 
+
+- Parts of Angular component
+  (Module(componnet(componentcclass,template,styles)))
+
+** angular bootstrapping sequence
+start -> index.html loads -> main.ts executes -> Root module loads -> rendered html displays web page
+
+
