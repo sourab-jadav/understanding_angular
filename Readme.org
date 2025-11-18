@@ -40,3 +40,54 @@
 start -> index.html loads -> main.ts executes -> Root module loads -> rendered html displays web page
 
 
+
+** understanding the flow across different angular files
+*** step - 1 => compilation
+- every angular app should contain atleast one module
+- app.module.ts -> the class inthis is the root module which has information about
+  1) all the components that are created
+  2) any third party library or any angular specific library that is being used( you can see in the import section)
+
+- any =component, directives and pipes= needs to be registered by declarations array
+
+- this ng module in the app.module.ts has all the information about different components and different angular modules being used
+  or any module created by you on your own that means you can have n number of modules in your application but you need one root module
+  that will be created by angular once you start your angular application
+
+
+So the control goes to the AppModule(in app.module.ts) which is the root module
+this @NgModule is a decorator (it modifies the behaviour of your class) here it is giving all the meta data information about what modules and components
+i am using to the compiler
+here in bootstarpp we specify the root component (AppComponent here)
+and this root component will be loaded in index.html
+
+*** step - 2 => boostrapping
+Now that the compilation has done angular needs to know which component it needs to load first
+**** what is component?
+from app.module.ts control goes to the app.component.ts along with for component 3 more files are created
+- .ts
+- .spec.ts
+- .scss
+- .html
+
+Similar to root module we will have root component   
+properties of @component({
+---
+})
+
+selector: 'app-root' => becomes html tag
+you can do in two ways of writing html in angular
+templateUrl: 'app.component.html' => for sepearte html file
+template: => you can use this property when you want to write innline html
+e.g:- template: '<h1>hello world from inline templated</h1>'
+
+TIP :- install extension can angular-language-service for language intelicense
+
+- for multi line you can use ``
+  template : `<h1>
+this is multilie </h1>`
+
+styleUrls: ['./app.component.scss'],
+styles: [`h1 {color: red;}`]
+
+
