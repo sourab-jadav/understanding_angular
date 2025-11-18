@@ -225,3 +225,17 @@ color:white;
 [innerText]="numberOfRomms"
 >
 
+
+
+** lifecycle hooqs in angular
+component instance has lifecycle hools which can help you to hook into different events on components.
+lifecycle ends when the component is destroyed
+1. ngOnChanges
+2. ngOnInit
+3. ngDooCheck
+4. ngAfterContentInit
+5. ngAftercontentChecked
+6. ngAfterViewInit
+7. ngAfterViewChecked
+8. ngOnDestroy
+
