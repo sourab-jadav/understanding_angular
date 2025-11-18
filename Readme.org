@@ -94,3 +94,4 @@ styles: [`h1 {color: red;}`]
 - creating prefix when creating the app => ng new <application name> --prefix <prefixname>
 
   
+- runninng the server using -> ng serve -o
