@@ -146,3 +146,10 @@ this.hiderooms=!this.hiderooms
 <button (click)="toggle()"></button>
 
 
+
+** debugging the angular application
+open  devtools > sources > page(leftmost) > webpack > . folder(it contains your src)
+here you can add break points by clicking the line numbers
+you can do c-p and open any file
+
+
