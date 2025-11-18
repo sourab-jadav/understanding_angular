@@ -239,3 +239,12 @@ lifecycle ends when the component is destroyed
 7. ngAfterViewChecked
 8. ngOnDestroy
 
+   
+1. first things first when the component is going to initialize the constructor is called
+2. then the ngOnInit() function is called
+
+   remember ngOnInit is where you write your logic constructor should be used only incase if you want to inject some services
+   constructor should not have any blocking code
+
+*** ngOnInit Usecase
+let's say you want to load some data from your api and you want to display that data on your view you should write that code as part of ngOnInit lifecycle hook
