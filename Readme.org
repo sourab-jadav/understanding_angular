@@ -153,3 +153,47 @@ here you can add break points by clicking the line numbers
 you can do c-p and open any file
 
 
+** Directives in angular
+they are something that can change the behaviour or appearences of your dom element
+- directives can implement all lifecycle hooks
+- diff b/w directive and component is directives cannot have templates
+
+*** types of directives
+1. structural directives (they are always costlier they are going to change the behaviour of the dom which may give performance issue)
+2. attribute directive (mostly u use this directive)
+
+**** built-in directives
+- *ngIf
+  TIP: use nfIf as much as possible don't reply on the hidden attribute of the tag to hide the eleement
+  because although the tag is not visible in the ui but it is visible in the devtools
+  EG:-
+  <div *ngIf="rooms.availableRooms > 0">
+  rooms list 
+</div>
+
+***** nullish collision and optional chaining
+{{ rooms?.availableRooms ?? 'noofrooms'}}  // this is nullish collision
+// this above takes care of two things if rooms available it will print it  else print noofrooms
+
+<div *ngIf="rooms?.available"> // optional chaining
+rooms list 
+</div>
+
+- *ngFor
+<div *ngIf="rooms?.available"> // optional chaining
+Rooms list
+<table>
+<tr>
+<th>eve/odd</th>
+<th>room number</th>
+<th>room type</th>
+<th>room price</th>
+<th>room ameneties</th>
+</tr>
+<tr *ngFor="let room of roomList; let e=even; let o=odd; let i=index"> //i starts from 0
+<td>{{ e? "even" : "odd"}}</td>
+<td>{{ room.roomnummber }}</td>
+</tr>
+</table>
+</div>
+  
