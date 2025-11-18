@@ -95,4 +95,7 @@ styles: [`h1 {color: red;}`]
 
   
 - runninng the server using -> ng serve -o
-- ng g c <component name>
+- ng g c <component name>(rooms comp in this case)
+- for angular commands visit angular docs > side bar > references > cli command references===-09
+- add the html tag of rooms component in the root component(app.component.html in this case)
+
