@@ -91,3 +91,6 @@ styleUrls: ['./app.component.scss'],
 styles: [`h1 {color: red;}`]
 
 
+- creating prefix when creating the app => ng new <application name> --prefix <prefixname>
+
+  
