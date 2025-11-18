@@ -197,3 +197,31 @@ Rooms list
 </table>
 </div>
   
+
+- structural directives are the ones which add or remove the element from the dom
+- ngClass and ngStyle are attribute based built in directives
+
+
+.scss 
+.even{
+background-color: stealblue;
+color:white;
+}
+.odd{
+background-color:tomato;
+color:white;
+}
+
+//let see who we can use class to toggle between even and odd
+.html
+<tr
+  [ngClass]="e? 'even' : 'odd'"
+  *ngFor = " let room of ".....
+  
+></tr>
+
+
+<div [ngStyle]="{'color':rooms.availableRooms ? 'green' : 'red'}"
+[innerText]="numberOfRomms"
+>
+
