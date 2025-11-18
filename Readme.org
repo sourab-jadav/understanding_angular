@@ -95,3 +95,4 @@ styles: [`h1 {color: red;}`]
 
   
 - runninng the server using -> ng serve -o
+- ng g c <component name>
