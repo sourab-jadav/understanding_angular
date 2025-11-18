@@ -99,3 +99,50 @@ styles: [`h1 {color: red;}`]
 - for angular commands visit angular docs > side bar > references > cli command references===-09
 - add the html tag of rooms component in the root component(app.component.html in this case)
 
+
+**** binding information
+there are 3 ways to bind information that is available in ts file to the html file
+1. Interpolation
+2. property binding
+3. Event binding
+
+=1.Interpolation=
+using interpolation you can bind dates,string,number,objects using interpolation
+
+say you have defined a name of type string in your comp class and you want to display in your .html file corresponding to comp
+export class Roomscomponent  implements OnInit {
+hotelname="hilton hotel"
+constructor(){}
+OnInit():void{
+
+}
+}
+
+in the html file=====>
+<h1>welcome to {{hotelname}}</h1>
+
+=2.property binding=
+angular allows us to use native html properties for binding
+say we have noOfrooms property declared with value 10 in the class
+
+one way of accessing this in this binding is
+<div [innerText]="noOfrooms"></div> // this is similar to below
+document.getElementByID('noOfrooms').innerText=noOfrooms
+
+
+=3.event binding=
+<button onClick="handleClick()"></button>  // this way is used in js
+
+.ts
+hiderooms=false
+toggle(){
+this.hiderooms=!this.hiderooms
+}
+.html
+<div [hidden]="hiderooms">
+
+// some html
+</div>
+<button (click)="toggle()"></button>
+
+
