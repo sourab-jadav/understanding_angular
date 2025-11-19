@@ -227,6 +227,30 @@ color:white;
 
 
 
+
+** pipes
+pipes are used for data transformation
+pipes don't change actual object
+*** applications
+=> we might need to display the date in the different way
+
+
+- DatePipe
+- UpperCasePipe
+- LowerCasePipe
+- CurrencyPipe
+- DecimalPipe
+- PercentPipe
+- JsonPipe
+- SlicePipe
+- AsyncPipe
+{{ room.rating | number : '1.1-3' : 'en-us' }}
+{{ room.checkinTime | date : 'dd/MM/YYY' }}
+{{ room.price | currency : 'INR'}}
+{{ room.roomType }}
+
+
+
 ** lifecycle hooqs in angular
 component instance has lifecycle hools which can help you to hook into different events on components.
 lifecycle ends when the component is destroyed
