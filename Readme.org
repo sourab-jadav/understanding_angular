@@ -272,3 +272,51 @@ lifecycle ends when the component is destroyed
 
 *** ngOnInit Usecase
 let's say you want to load some data from your api and you want to display that data on your view you should write that code as part of ngOnInit lifecycle hook
+
+
+
+*** ways of component interaction
+- using @Input and @Output
+- using @ViewChild and @ContentChild
+- using Services
+
+  hence we talk about ngOnChanges we are going to use the component communication using Input and Output
+
+
+
+parent child - smart component and dumb component
+****************************************
+EG:-
+rooms-list component:-(child-dumb comp)
+.ts
+
+@Input() rooms:RoomList[] ={};
+@Output() selectedRoom = new EventEmitter<RoomList>();
+
+.html
+<tr *ngFor="let room of roomList; let e=even; let o=odd; let i=index"> //i starts from 0
+<td>
+<button
+   class = "btn btn-primary"
+   (click)="selectRoom(room)"
+   >select</button>
+</td>
+
+
+.ts
+selectRoom(room:RoomList){
+this.selectedRoom.emit(room)
+}
+
+****************************************
+rooms component :-
+.html
+<hinv-rooms-list [rooms]="roomList"
+  (selectedRoom)="selectRoom($event)"
+>
+
+.ts
+selectRoom(room:RoomList){
+console.log(room)
+}
+****************************************
